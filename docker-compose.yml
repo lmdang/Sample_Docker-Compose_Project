@@ -22,9 +22,9 @@ services:
       - backend
 
   backend-api:
-    # dockerfile
     build: ./backend/
     restart: always
+    command: bash -c "npm run dev"
     volumes:
       - ./backend:/usr/src/app
     depends_on:
@@ -34,9 +34,9 @@ services:
       - frontend
 
   frontend-app:
-    # dockerfile
     build: ./frontend/
     restart: always
+    command: bash -c "npm start"
     volumes:
       - ./frontend:/usr/src/app
     depends_on:
