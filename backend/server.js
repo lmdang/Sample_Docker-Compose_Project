@@ -78,7 +78,7 @@ app.post('/multplynumber', (req, res) => {
   });
 });
 
-//GET /checkdb
+//GET /checkdb //test githubDesktop
 app.get('/values', (req, res) => {
   connection.query('SELECT value from test_table', function (err, rows, fields) {
     if (err) {
